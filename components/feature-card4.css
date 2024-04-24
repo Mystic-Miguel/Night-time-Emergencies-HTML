@@ -1,3 +1,15 @@
+<div class="feature-card-container">
+  <div class="feature-card">
+    <div class="feature-card-image"></div>
+    <div class="feature-card-text">
+      <h3>Feature 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </div>
+  <!-- More feature cards -->
+</div>
+
+
 /* Feature card container */
 .feature-card-container {
   /* Add spacing between elements */
@@ -17,16 +29,16 @@
   line-height: 1.71;
 }
 
-/* Media query for screens up to 767px wide */
-@media (max-width: 767px) {
+/* Media query for small screens (up to 575.98px wide) */
+@media (max-width: 575.98px) {
   /* Change feature card layout to row */
   .feature-card {
     flex-direction: row;
   }
 }
 
-/* Media query for screens up to 479px wide */
-@media (max-width: 479px) {
+/* Media query for extra small screens (up to 479.98px wide) */
+@media (max-width: 479.98px) {
   /* Change feature card container layout to column */
   .feature-card-container {
     flex-direction: column;
