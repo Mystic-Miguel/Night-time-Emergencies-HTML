@@ -1,13 +1,19 @@
+:root {
+  --question-gap: var(--dl-space-space-unit);
+  --question-alignment: flex-start;
+  --question-direction: column;
+}
+
 .question11-container {
-  gap: var(--dl-space-space-unit);
-  flex: 1;
+  gap: var(--question-gap);
   width: auto;
   height: auto;
   display: flex;
   position: relative;
-  align-items: flex-start;
-  flex-direction: column;
+  align-items: var(--question-alignment);
+  flex-direction: var(--question-direction);
 }
+
 .question11-text {
   font-weight: 700;
 }
