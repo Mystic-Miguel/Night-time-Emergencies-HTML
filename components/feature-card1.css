@@ -1,24 +1,38 @@
+/* Feature card container styles */
 .feature-card-container {
+  /* Gap between elements */
   gap: var(--spacing-unit);
+  /* Display elements in a column */
   display: flex;
   flex-direction: column;
+  /* Align items to the left */
   align-items: flex-start;
+  /* Vertically align elements to the top */
   justify-content: flex-start;
 }
 
+/* Feature card text styles */
 .feature-card-text {
+  /* Semi-bold font weight */
   font-weight: 600;
+  /* Line height */
   line-height: 1.71;
 }
 
+/* Media query for screens up to 767px wide */
 @media (max-width: 767px) {
+  /* Feature card styles for smaller screens */
   .feature-card {
+    /* Change flex direction to row */
     flex-direction: row;
   }
 }
 
+/* Media query for screens up to 479px wide */
 @media (max-width: 479px) {
+  /* Feature card container styles for very small screens */
   .feature-card-container {
+    /* Change flex direction to column */
     flex-direction: column;
   }
 }
