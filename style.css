@@ -1,3 +1,10 @@
 :root {
   --dl-color-gray-500: #595959;
-  --dl-color-gray-70
+  --dl-color-gray-700: #333;
+}
+
+
+/* This is the root of the document and defines global color variables */
+:root {
+  /* Gray color with 50% opacity */
+  --dl-color-gray-5
