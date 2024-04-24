@@ -1,9 +1,10 @@
 :root {
   --space-unit: var(--dl-space-space-unit);
-  --space-oneandhalfunits: var(--dl-space-space-oneandhalfunits);
-  --space-twounits: var(--dl-space-space-twounits);
-  --space-threeunits: var(--dl-space-space-threeunits);
-  --space-fourunits: var(--dl-space-space-fourunits);
+  --space-one-and-half: calc(var(--space-unit) * 1.5);
+  --space-two: var(--dl-space-space-twounits);
+  --space-three: var(--dl-space-space-threeunits);
+  --space-four: var(--dl-space-space-fourunits);
+  --gallery-grid-template: repeat(7, 1fr) / repeat(3, 1fr);
 }
 
 .container {
@@ -20,6 +21,7 @@
   min-height: 100vh;
   align-items: center;
   flex-direction: column;
+  gap: var(--space-two);
 }
 
 .gallery-hero {
@@ -29,6 +31,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: var(--space-one-and-half);
+  flex-direction: column;
 }
 
 .gallery-hero-heading {
@@ -40,16 +44,17 @@
   width: 100%;
   display: grid;
   grid-gap: var(--space-unit);
-  grid-template-rows: repeat(7, 1fr);
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: var(--gallery-grid-template);
+  grid-template-columns: var(--gallery-grid-template);
   align-items: flex-start;
-  padding: var(--space-twounits) var(--space-threeunits);
+  padding: var(--space-two) var(--space-three);
 }
 
 .gallery-item {
   background-size: cover;
   background-position: center;
   transition: transform 0.3s;
+  grid-area: auto / auto;
 }
 
 .gallery-item:hover {
@@ -58,43 +63,7 @@
 
 .gallery-item:nth-child(1) {
   background-image: url("https://images.unsplash.com/photo-1498847698180-2ca4b649d5c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTcxMzI1NTg1N3w&ixlib=rb-4.0.3&q=80&w=1080");
-  grid-area: a;
 }
 
 .gallery-item:nth-child(2) {
-  background-image: url("https://images.unsplash.com/photo-1610647752706-3bb12232b3ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTcxMzI1NTg1N3w&ixlib=rb-4.0.3&q=80&w=1080");
-  grid-area: b;
-}
-
-// Add more .gallery-item rules for additional grid items
-
-@media (max-width: 991px) {
-  .gallery-hero {
-    flex-direction: column;
-  }
-
-  .gallery-gallery {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 767px) {
-  .gallery-hero {
-    padding: var(--space-twounits);
-  }
-
-  .gallery-gallery {
-    height: auto;
-    padding: var(--space-unit);
-  }
-}
-
-@media (max-width: 479px) {
-  .container {
-    padding: var(--space-unit);
-  }
-
-  .gallery-gallery {
-    padding: var(--space-unit);
-  }
-}
+  background-image: url("https://images.unsplash.com/photo-1610647752706-3bb12232b3ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTMyMXwwfDF8cmFuZG9
