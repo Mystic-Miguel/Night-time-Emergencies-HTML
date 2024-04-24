@@ -1,22 +1,38 @@
 :root {
-  --space-unit: var(--dl-space-space-unit);
-  --space-twounits: var(--dl-space-space-twounits);
-  --space-threeunits: var(--dl-space-space-threeunits);
-  --space-fourunits: var(--dl-space-space-fourunits);
-  --space-oneandhalfunits: var(--dl-space-space-oneandhalfunits);
-  --size-size-xsmall: var(--dl-size-size-xsmall);
+  /* Define the space units */
+  --space-unit: 16px;
+  --space-twounits: calc(2 * var(--space-unit));
+  --space-threeunits: calc(3 * var(--space-unit));
+  --space-fourunits: calc(4 * var(--space-unit));
+  --space-oneandhalfunits: calc(1.5 * var(--space-unit));
+
+  /* Define the size units */
+  --size-size-xsmall: 24px;
+}
+
+* {
+  /* Include padding and border in the element's total width and height */
+  box-sizing: border-box;
+}
+
+body {
+  /* Set the font family and size */
+  font-family: Arial, sans-serif;
+  font-size: 16px;
 }
 
 .container {
+  /* Center the content */
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .feature-card-container,
 .question1-container,
 .home-container {
+  /* Add spacing between elements */
   gap: var(--space-unit);
   display: flex;
   align-items: flex-start;
@@ -27,36 +43,44 @@
 .feature-card-text,
 .question1-text,
 .home-text {
+  /* Set the font weight and line height */
   font-weight: 600;
   line-height: 28px;
+  /* Add a fallback value for the line-height property */
+  line-height: 1.75rem;
 }
 
 @media (max-width: 767px) {
   .feature-card-feature-card,
   .feature-card-container {
+    /* Change the flex direction for smaller screens */
     flex-direction: column;
   }
 }
 
 @media (max-width: 479px) {
   .feature-card-container {
+    /* Change the flex direction for very small screens */
     flex-direction: column;
   }
 }
 
 .home-navbar-interactive {
+  /* Add spacing around the content */
+  padding: var(--space-twounits);
   display: flex;
   align-items: center;
-  padding: var(--space-twounits);
   justify-content: space-between;
 }
 
 .home-desktop-menu {
+  /* Add spacing between elements */
   display: flex;
   justify-content: space-between;
 }
 
 .home-links {
+  /* Center the content */
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -67,10 +91,12 @@
 .home-text03,
 .home-text04,
 .home-text05 {
+  /* Add spacing around the text */
   margin-left: var(--space-twounits);
 }
 
 .home-buttons {
+  /* Add spacing around the buttons */
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -78,10 +104,12 @@
 }
 
 .home-burger-menu {
+  /* Hide the hamburger menu on larger screens */
   display: none;
 }
 
 .home-mobile-menu {
+  /* Position the mobile menu */
   position: absolute;
   top: 0;
   left: 0;
@@ -89,117 +117,19 @@
   height: 100vh;
   z-index: 100;
   padding: 32px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
+  /* Add a blur effect on the background */
+  backdrop-filter: blur(10px);
   transform: translateX(100%);
   transition: transform 0.5s;
+  /* Enable scrolling if the content overflows */
+  overflow: auto;
+  /* Allow vertical scrolling on touch devices */
+  touch-action: pan-y;
+  /* Prevent text selection */
+  user-select: none;
+  /* Add rounded corners */
+  border-radius: 10px;
+  /* Add spacing around the content */
   flex-direction: column;
-  justify-content: space-between;
-}
-
-.home-nav {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
-
-.home-top {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: var(--space-threeunits);
-}
-
-.home-text09 {
-  font-size: 30px;
-  font-weight: 700;
-}
-
-.home-close-menu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.home-icon02 {
-  width: var(--size-size-xsmall);
-  height: var(--size-size-xsmall);
-}
-
-.home-links1 {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
-
-.home-text10,
-.home-text11,
-.home-text12,
-.home-text13,
-.home-text14 {
-  margin-bottom: var(--space-unit);
-}
-
-.home-buttons1 {
-  border: 2px dashed rgba(120, 120, 120, 0.4);
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: var(--space-unit);
-}
-
-.home-icon04,
-.home-icon06,
-.home-icon08 {
-  width: var(--size-size-xsmall);
-  height: var(--size-size-xsmall);
-  margin-right: var(--space-twounits);
-}
-
-.home-hero {
-  flex: 0 0 auto;
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  margin-top: 96px;
-}
-
-.home-container1 {
-  gap: var(--space-oneandhalfunits);
-  align-items: center;
-}
-
-.home-hero-heading {
-  max-width: 800px;
-  text-align: center;
-}
-
-.home-hero-sub-heading {
-  font-size: 18px;
-  text-align: center;
-}
-
-.home-btn-group {
-  gap: var(--space-oneandhalfunits);
-  display: flex;
-  align-items: center;
-}
-
-.home-hero-button1 {
-  text-decoration: none;
-}
-
-.home-features {
-  flex: 0 0 auto;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.home-features1 {
-  gap: var(--space-threeunits);
-  width: 1
+  justify-
