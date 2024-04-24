@@ -1,24 +1,25 @@
 .feature-card-container {
-  gap: var(--dl-space-space-unit);
   display: flex;
-  align-items: flex-start;
   flex-direction: column;
-  justify-content: flex-start;
+  align-items: flex-start;
+  gap: var(--dl-space-space-unit);
 }
+
 .feature-card-text {
   font-weight: 600;
   line-height: 28px;
 }
-@media(max-width: 767px) {
+
+@media (max-width: 767px) {
   .feature-card-feature-card {
     flex-direction: row;
   }
-  .feature-card-container {
-    flex-direction: column;
-  }
 }
-@media(max-width: 479px) {
+
+@media (max-width: 479px) {
   .feature-card-container {
     flex-direction: column;
   }
+  
+  /* You can add any other styles specific to screens smaller than 479px here */
 }
