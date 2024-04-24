@@ -1,23 +1,33 @@
+/* Feature card container */
 .feature-card-container {
+  /* Add spacing between elements */
   gap: var(--spacing-unit);
-  display: flex;
-  flex-direction: column;
+  /* Align items to the left and stack them vertically */
   align-items: flex-start;
   justify-content: flex-start;
+  /* Make the container a column layout */
+  display: flex;
+  flex-direction: column;
 }
 
+/* Feature card text */
 .feature-card-text {
+  /* Set font weight to medium and line height to 1.71 */
   font-weight: 600;
   line-height: 1.71;
 }
 
+/* Media query for screens up to 767px wide */
 @media (max-width: 767px) {
+  /* Change feature card layout to row */
   .feature-card {
     flex-direction: row;
   }
 }
 
+/* Media query for screens up to 479px wide */
 @media (max-width: 479px) {
+  /* Change feature card container layout to column */
   .feature-card-container {
     flex-direction: column;
   }
