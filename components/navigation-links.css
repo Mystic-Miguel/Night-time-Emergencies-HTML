@@ -6,16 +6,20 @@
 }
 
 $texts: text1, text2, text3, text4;
+
 @each $text in $texts {
   .navigation-links-#{$text} {
     margin-left: var(--dl-space-space-twounits);
     flex-basis: 33%;
     box-sizing: border-box;
 
-    @media(max-width: 767px) {
-      margin-left: 0;
-      margin-bottom: var(--dl-space-space-unit);
-      flex-basis: 100%;
+    @media (max-width: 767px) {
+      &,
+      .navigation-links-text#{$text} {
+        margin-left: 0;
+        margin-bottom: var(--dl-space-space-unit);
+        flex-basis: 100%;
+      }
     }
   }
 }
