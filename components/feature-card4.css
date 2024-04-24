@@ -1,24 +1,24 @@
-.feature-card4-container {
-  gap: var(--dl-space-space-unit);
+.feature-card-container {
+  gap: var(--spacing-unit);
   display: flex;
-  align-items: flex-start;
   flex-direction: column;
+  align-items: flex-start;
   justify-content: flex-start;
 }
-.feature-card4-text {
+
+.feature-card-text {
   font-weight: 600;
-  line-height: 28px;
+  line-height: 1.71;
 }
-@media(max-width: 767px) {
-  .feature-card4-feature-card {
+
+@media (max-width: 767px) {
+  .feature-card {
     flex-direction: row;
   }
-  .feature-card4-container {
-    flex-direction: column;
-  }
 }
-@media(max-width: 479px) {
-  .feature-card4-container {
+
+@media (max-width: 479px) {
+  .feature-card-container {
     flex-direction: column;
   }
 }
