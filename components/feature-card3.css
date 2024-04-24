@@ -1,24 +1,27 @@
 .feature-card3-container {
-  gap: var(--dl-space-space-unit);
+  gap: var(--spacing-unit);
   display: flex;
-  align-items: flex-start;
   flex-direction: column;
-  justify-content: flex-start;
+  align-items: flex-start;
 }
+
 .feature-card3-text {
   font-weight: 600;
-  line-height: 28px;
+  line-height: 1.71;
 }
-@media(max-width: 767px) {
+
+@media (max-width: 767px) {
   .feature-card3-feature-card {
     flex-direction: row;
   }
+
   .feature-card3-container {
-    flex-direction: column;
+    gap: var(--spacing-unit);
   }
 }
-@media(max-width: 479px) {
+
+@media (max-width: 479px) {
   .feature-card3-container {
-    flex-direction: column;
+    gap: var(--spacing-unit);
   }
 }
