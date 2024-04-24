@@ -5,6 +5,24 @@
   gap: var(--dl-space-space-unit);
 }
 
+.feature-card-feature-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--dl-space-space-unit);
+  align-items: flex-start;
+}
+
+.feature-card-image {
+  width: 100%;
+  height: auto;
+}
+
+.feature-card-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--dl-space-space-unit);
+}
+
 .feature-card-text {
   font-weight: 600;
   line-height: 28px;
@@ -14,12 +32,23 @@
   .feature-card-feature-card {
     flex-direction: row;
   }
+
+  .feature-card-text-container {
+    align-items: center;
+  }
 }
 
 @media (max-width: 479px) {
   .feature-card-container {
     flex-direction: column;
   }
-  
-  /* You can add any other styles specific to screens smaller than 479px here */
-}
+
+  .feature-card-feature-card {
+    align-items: center;
+  }
+
+  .feature-card-image {
+    width: 70%;
+  }
+
+  /* You can add
